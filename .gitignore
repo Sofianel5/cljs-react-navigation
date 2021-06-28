@@ -1,2 +1,5 @@
 /.shadow-cljs/
 /react-native/target/
+/.lsp/
+/node_modules/
+/react-native/node_modules/

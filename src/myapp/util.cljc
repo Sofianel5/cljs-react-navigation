@@ -3,7 +3,7 @@
   (:require [applied-science.js-interop :as j]
             [hx.react]
             [helix.core])
-  #?(:cljs (:require-macros [sup.client.ui.lib.core :refer [defnc]])))
+  #?(:cljs (:require-macros [myapp.util :refer [defnc]])))
 
 (defmacro defnc [type params & body]
   (let [default-opts {:helix/features {:fast-refresh true}}
@@ -13,7 +13,6 @@
     `(helix.core/defnc ~type ~params
        ~(merge default-opts opts)
        (hx.react/f (do ~@body)))))
-
 
 (defnc CenteredView [props]
   [hx.react/View {:style {:flex 1
